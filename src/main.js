@@ -106,19 +106,21 @@ if(phoneValue === "")
     errorphone.classList.remove("hidden");  
    
     mobileicon.classList.remove("bottom-2");
-    mobileicon.classList.add("bottom-8");
+    mobileicon.classList.add("bottom-10");
      errorphone.textContent = "Please enter your phone number";
     validate = false;
 }
 else if(!phonenumberpattern.test(phoneValue)){
     errorphone.classList.remove("hidden");  
     errorphone.textContent = "please enter validate Number";
-     validate = false;
+    mobileicon.classList.remove("bottom-2");
+     mobileicon.classList.add("bottom-8"); 
+    validate = false;
 }
 else{
     errorphone.classList.add("hidden");
-     mobileicon.classList.remove("bottom-8");
-    mobileicon.classList.add("bottom-2");
+     mobileicon.classList.remove("bottom-10");
+     mobileicon.classList.add("bottom-2");
    
 }
 

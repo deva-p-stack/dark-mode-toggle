@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dark-mode-toggle</title>
+    
+  </head>
+  <body class="transition-colors duration-300">
+
+    <section class="bg-gray-100 flex justify-center items-center min-h-screen w-full max-8xl p-3 flex-col ">
+
+      <form  id="form" class="flex flex-col max-w-sm w-full p-5 gap-5  h-auto dark:bg-gray-800 bg-[#fffdfd]/70 border border-white/20 rounded-xl shadow-xl/20 backdrop-blur-lg ">
+<!-- dark mode and light toggle -->
+          <div  class=" flex justify-end items-end mx-auto w-full relative  ">
+          <svg id="darkbtn" class="absolute  top-0.5  cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M12.058 20q-3.334 0-5.667-2.333T4.058 12q0-3.039 1.98-5.27t4.904-2.634q.081 0 .159.006t.153.017q-.506.706-.801 1.57T10.158 7.5q0 2.667 1.866 4.533t4.534 1.867q.951 0 1.813-.295t1.548-.801q.012.075.017.153t.006.159q-.384 2.923-2.615 4.903T12.057 20m0-1q2.2 0 3.95-1.213t2.55-3.162q-.5.125-1 .2t-1 .075q-3.074 0-5.237-2.162T9.158 7.5q0-.5.075-1t.2-1q-1.95.8-3.163 2.55T5.058 12q0 2.9 2.05 4.95t4.95 2.05m-.25-6.75"/></svg>
+          <svg id="lightbtn" class="absolute hidden top-0.5  cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="currentColor" d="M12 16q-1.671 0-2.835-1.164Q8 13.67 8 12t1.165-2.835T12 8t2.836 1.165T16 12t-1.164 2.836T12 16M2 12.5q-.213 0-.356-.144t-.144-.357t.144-.356T2 11.5h2.5q.213 0 .356.144t.144.357t-.144.356t-.356.143zm17.5 0q-.213 0-.356-.144T19 11.999t.144-.356t.356-.143H22q.213 0 .356.144t.144.357t-.144.356T22 12.5zM12 5q-.213 0-.357-.144T11.5 4.5V2q0-.213.144-.356t.357-.144t.356.144T12.5 2v2.5q0 .213-.144.356T11.999 5m0 17.5q-.212 0-.356-.144T11.5 22v-2.5q0-.213.144-.356t.357-.144t.356.144t.143.356V22q0 .213-.144.356t-.357.144M6.362 7.03l-1.44-1.395q-.147-.14-.144-.344t.149-.37q.16-.165.354-.165t.354.165L7.05 6.342q.16.166.16.354q0 .189-.15.354t-.342.153t-.356-.172m12.004 12.048l-1.416-1.421q-.16-.166-.16-.357t.16-.351q.13-.165.327-.153q.196.013.362.172l1.44 1.397q.146.14.143.344t-.149.369q-.16.165-.354.165t-.354-.165M16.95 7.059q-.165-.15-.153-.34t.172-.358l1.397-1.44q.14-.146.344-.143t.369.149q.165.16.165.354t-.165.353L17.658 7.05q-.166.16-.354.16t-.354-.15M4.921 19.083q-.165-.17-.165-.364t.165-.353l1.421-1.416q.166-.16.357-.16q.192 0 .351.16q.146.13.134.327q-.013.196-.153.362l-1.397 1.44q-.159.165-.353.162q-.195-.002-.36-.158"/></svg>
+        </div>
+
+        <h3  id ="h3" class="text-xl dark:text-gray-200  font-medium text-center">Visitor Registration Form</h3>
+
+        <div class="relative">
+          <!-- name inoput -->
+          <input class="  bg-[#f1f8ff] text-[#818CF8] px-8  py-2 rounded-sm w-full  outline-none input placeholder-gray-500/70 focus:ring-1 focus:ring-offset-0 " type="text" placeholder="Enter your name" aria-label="name" id="name">
+          <svg class="usericon transition-all duration-300 ease-in-out absolute bottom-2 left-1 text-gray-500 mx-auto hover:text-gray-400 cursor-pointer " xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE --><path fill="currentColor" d="M12 12q-1.65 0-2.825-1.175T8 8t1.175-2.825T12 4t2.825 1.175T16 8t-1.175 2.825T12 12m-8 6v-.8q0-.85.438-1.562T5.6 14.55q1.55-.775 3.15-1.162T12 13t3.25.388t3.15 1.162q.725.375 1.163 1.088T20 17.2v.8q0 .825-.587 1.413T18 20H6q-.825 0-1.412-.587T4 18"/></svg>
+          <small class=" errorname hidden px-1.5 text-gray-500"></small>  
+        </div>
+        <!-- number inout -->
+        <div class="relative">
+          <input class=" bg-[#f1f8ff] text-[#818CF8] px-8  py-2 rounded-sm w-full  outline-none input placeholder-gray-500/70 dark:placeholder-gray-400 focus:ring-1 focus:ring-offset-0 " type="tel" placeholder="Enter your Phone Number" aria-label="tel" id="phone">
+         <svg class="mobileicon transition-all duration-300 ease-in-out absolute bottom-2 left-1.5  text-gray-500 mx-auto hover:text-gray-400 cursor-pointer " xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><!-- Icon from Google Material Icons by Material Design Authors - https://github.com/material-icons/material-icons/blob/master/LICENSE --><path fill="currentColor" d="m19.23 15.26l-2.54-.29a1.99 1.99 0 0 0-1.64.57l-1.84 1.84a15.05 15.05 0 0 1-6.59-6.59l1.85-1.85c.43-.43.64-1.03.57-1.64l-.29-2.52a2 2 0 0 0-1.99-1.77H5.03c-1.13 0-2.07.94-2 2.07c.53 8.54 7.36 15.36 15.89 15.89c1.13.07 2.07-.87 2.07-2v-1.73c.01-1.01-.75-1.86-1.76-1.98"/></svg>
+          <small class="errorphone hidden px-1.5 text-gray-500"></small>  
+        </div>
+        <!-- address input -->
+         <div class="">
+            <textarea id="address" class="  bg-[#f1f8ff] text-[#818CF8] px-2  py-2 rounded-sm w-full  outline-none input placeholder-gray-500/70 focus:ring-1 focus:ring-offset-0"  name="address"  placeholder=" 🏠︎ Enter your Address "></textarea>
+            <div class="flex justify-between items-end">
+            <small class=" erroraddress  px-1.5 text-gray-500"></small>  
+              <small class=" livecount  text-gray-400  px-1 text-[11px]  "></small>
+            </div>
+          </div>
+
+        <div class="flex justify-center items-center w-full pb-3">
+          <button type="submit" id="submitbtn" class=" hover:bg-[#bfd2e7]   bg-[#cce0f5] w-[80%] transition-colors active:scale-99 ease-in-out duration-300 py-2 px-4 cursor-pointer  text-lg rounded-md text-[#000000]">Submit</button>
+        </div>
+
+
+
+      </form>
+
+    </section>
+
+    
+    
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+
+

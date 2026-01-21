@@ -21,55 +21,60 @@ let usericon = document.querySelector('.usericon');
 let mobileicon = document.querySelector('.mobileicon');
 let erroraddress = document.querySelector('.erroraddress');
 let livecount = document.querySelector('.livecount');
+let section = document.querySelector('.section');
 
 // load the theme
-if(localStorage.theme === "dark"){
-    html.classList.add("dark");
-    darkbtn.classList.add("hidden");
-    lightbtn.classList.remove("hidden");
-}else{
-  html.classList.remove("dark");
-   darkbtn.classList.remove("hidden");
-    lightbtn.classList.add("hidden");
-}
+// if(localStorage.theme === "dark"){
+//     html.classList.add("dark");
+//     darkbtn.classList.add("hidden");
+//     lightbtn.classList.remove("hidden");
+// }else{
+//   html.classList.remove("dark");
+//    darkbtn.classList.remove("hidden");
+//     lightbtn.classList.add("hidden");
+// }
 
 
 darkbtn.addEventListener("click",function(){
-
+  h3.classList.remove("text-dark");
     lightbtn.classList.toggle("hidden");
     darkbtn.classList.toggle("hidden");
     html.classList.add("dark");
-      localStorage.theme = "dark";
-    form.classList.toggle("bg-gray-800");
-    h3.classList.toggle("text-gray-200");
+      // localStorage.theme = "dark";
+      form.classList.remove("bg-[#fffdfd]");
+    form.classList.add("bg-gray-800");
+    h3.classList.add("text-gray-200");
+    section .classList.toggle("bg-gray-900");
+
 
     
 // save the theme
-if (html.classList.contains("dark")) {
-  localStorage.theme = "dark";
-} else {
-  localStorage.theme = "light";
-}
+// if (html.classList.contains("dark")) {
+//   localStorage.theme = "dark";
+// } else {
+//   localStorage.theme = "light";
+// }
 
 })
 
 lightbtn.addEventListener("click",function(){
+   form.classList.remove("bg-gray-800");
+    h3.classList.remove("text-gray-200");
  
  darkbtn.classList.toggle("hidden");
  lightbtn.classList.toggle("hidden");
  html.classList.remove("dark");
  html.removeAttribute("class");
   localStorage.theme = "light";
- form.classList.toggle("bg-[#fffdfd]");
- h3.classList.toggle("text-dark");
-
-
+ form.classList.add("bg-[#fffdfd]");
+ h3.classList.add("text-dark");
+ section .classList.toggle("bg-gray-900");
    // save the theme
-if (html.classList.contains("dark")) {
-  localStorage.theme = "dark";
-} else {
-  localStorage.theme = "light";
-}
+// if (html.classList.contains("dark")) {
+//   localStorage.theme = "dark";
+// } else {
+//   localStorage.theme = "light";
+// }
 })
 
 
@@ -106,7 +111,7 @@ if(phoneValue === "")
     errorphone.classList.remove("hidden");  
    
     mobileicon.classList.remove("bottom-2");
-    mobileicon.classList.add("bottom-10");
+    mobileicon.classList.add("bottom-8.5");
      errorphone.textContent = "Please enter your phone number";
     validate = false;
 }
